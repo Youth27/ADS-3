@@ -12,7 +12,6 @@ int cbinsearch(int *arr, int size, int value) {
     return schetchik;
   } 
   else {
-    return 0;
+    return 0; // если ничего не найдено
   }
-  return 0; // если ничего не найдено
 }
