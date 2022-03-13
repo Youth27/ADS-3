@@ -2,14 +2,21 @@
 
 int cbinsearch(int *arr, int size, int value) {
   //  поместить сюда реализацию алгоритма
-  int schetchik = 0, j = 0;
-  for (j; size > j; j++) {
-    if (arr[j] == value) {
-      schetchik++;
+  int result = 0, start = 0, end = size - 1, centor = 0;
+  while (start < end) {
+    centor = (start + end) * 0.5; 
+    if (arr[centor] < value) {
+      start = centor + 1;
+    } else {
+     end = centor; 
     }
   }
-  if (schetchik != 0) {
-    return schetchik;
+  while (arr[start] == value) {
+    start = start + 1;
+    result = result + 1;
+  }
+  if (result != 0) {
+    return result;
   } else {
     return 0; // если ничего не найдено
   }
