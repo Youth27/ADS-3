@@ -4,11 +4,11 @@ int cbinsearch(int *arr, int size, int value) {
   //  поместить сюда реализацию алгоритма
   int result = 0, start = 0, end = size - 1, centor = 0;
   while (start < end) {
-    centor = (start + end) * 0.5; 
+    centor = (start + end) * 0.5;
     if (arr[centor] < value) {
       start = centor + 1;
     } else {
-     end = centor; 
+     end = centor;
     }
   }
   while (arr[start] == value) {
